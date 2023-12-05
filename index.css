@@ -1,0 +1,40 @@
+.logo {
+  width: 100%;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.navbar-brand {
+  width: 10%;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.nav-link {
+  color: white;
+}
+
+a:hover {
+  color: red;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: red;
+}
+
+.navbar form {
+  color: white;
+  align-items: center;
+  justify-content: end;
+}
+
+.user {
+  width: 10%;
+}
+
+.user img {
+  width: 100%;
+}
