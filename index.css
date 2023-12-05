@@ -1,5 +1,5 @@
-body{
- background-color: black;
+body {
+  background-color: #000000;
 }
 
 .logo {
@@ -38,43 +38,73 @@ a:hover {
 
 .user {
   width: 30px;
-  height: 30px,
+  height: 30px;
 }
 
 .user img {
   width: 100%;
 }
 
-ion-icon[name="caret-down"]{
- align-self: start;
+ion-icon[name="caret-down"] {
+  align-self: start;
 }
 
-ion-icon[name="menu-outline"]{
- color: white;
+ion-icon[name="menu-outline"] {
+  color: white;
   font-size: 40px;
 }
 
-form{
-width: 50%
+form {
+  width: 50%;
 }
 
 .user_wrap {
- display: flex;
- align-items: start;
+  display: flex;
+  align-items: start;
 }
 
-.section ion-icon{
-font-size: 20px;
+.section ion-icon {
+  font-size: 20px;
 }
 
-.select{
-background-color: gray;
-height: fit-content;
-border-color: white;
-color: white;
+.select {
+  background-color: black;
+  height: fit-content;
+  border-color: white;
+  color: white;
 }
 
-.section{
- background-color: black;
- color: white;
+.section {
+  background-color: black;
+  color: white;
+}
+
+.carousel-inner {
+  overflow: visible;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  display: block;
+  position: static;
+  width: 32px;
+}
+
+#carouselExample,
+#again,
+#new {
+  display: flex;
+  gap: 5px;
+  /* justify-content: space-around; */
+}
+
+.card {
+  border: unset;
+  border-radius: unset;
+}
+
+.card-img,
+.card-img-top {
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
 }
