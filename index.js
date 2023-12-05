@@ -16,19 +16,16 @@ const trend = [];
 for (let i = 0; i < movies.length; i++) {
   if (movies[i].isTrending) trend.push(movies[i]);
 }
-console.log(trend.length);
 
 const again = [];
 for (let i = 0; i < movies.length; i++) {
   if (movies[i].isAgain) again.push(movies[i]);
 }
-console.log(again.length);
 
 const newM = [];
 for (let i = 0; i < movies.length; i++) {
   if (movies[i].isNew) newM.push(movies[i]);
 }
-console.log(newM.length);
 
 const carosel = document.querySelector("#carouselExample .carousel-inner");
 
