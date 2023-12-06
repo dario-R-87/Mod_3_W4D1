@@ -106,6 +106,7 @@ form ion-icon{
 .card {
   border: unset;
   border-radius: unset;
+  transition: 0.3s;
 }
 
 .card-img,
@@ -120,9 +121,26 @@ form ion-icon{
  width: 60%;
  margin-inline: auto;
  white-space: nowrap;
+ margin-top: 100px;
 }
 
 .section button{
   color: #726b6b;
   border-color: #726b6b!important;
+}
+
+.social{
+  font-size: 18px;
+}
+
+form div:hover,
+.select:hover,
+.social ion-icon:hover,
+.col-6 div span:hover{
+  cursor: pointer;
+}
+
+.card:hover{
+ transform: scale(1.5);
+ z-index: 99;
 }
