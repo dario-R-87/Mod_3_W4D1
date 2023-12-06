@@ -154,3 +154,18 @@ for (let x = 0; x < end_for_new; x++) {
   }
   carosel__item.innerHTML += `<div class='row gx-1 justify-content-center'>${html__item}</div>`;
 }
+
+window.addEventListener("scroll", function () {
+  let elementDaMostrare = document.querySelector("#again_wrapper");
+
+  let posizione = elementDaMostrare.getBoundingClientRect().top;
+  let altezzaFinestra = window.innerHeight;
+
+  // Controlla se l'elemento è visibile
+  if (posizione + 200 < altezzaFinestra) {
+    elementDaMostrare.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  }
+  if (posizione > altezzaFinestra) {
+    elementDaMostrare.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  }
+});

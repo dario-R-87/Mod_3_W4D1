@@ -59,7 +59,7 @@ form {
   width: 50%;
 }
 
-form ion-icon{
+form ion-icon {
   font-size: 16px;
 }
 
@@ -70,12 +70,14 @@ form ion-icon{
 
 .section ion-icon {
   font-size: 20px;
+  color: #726b6b;
+  border-color: #726b6b !important;
 }
 
 .select {
-  background-color: black;
+  background-color: rgb(41, 41, 41);
   height: fit-content;
-  border-color: white;
+  border-color: #726b6b;
   color: white;
 }
 
@@ -115,32 +117,45 @@ form ion-icon{
   border-top-right-radius: unset;
 }
 
-#footer{
- font-size: 12px;
- color: #726b6b;
- width: 60%;
- margin-inline: auto;
- white-space: nowrap;
- margin-top: 100px;
-}
-
-.section button{
+#footer {
+  font-size: 12px;
   color: #726b6b;
-  border-color: #726b6b!important;
+  width: 60%;
+  margin-inline: auto;
+  white-space: nowrap;
+  margin-top: 100px;
 }
 
-.social{
+.section button {
+  color: #726b6b;
+  border-color: #726b6b !important;
+}
+
+.social {
   font-size: 18px;
 }
 
 form div:hover,
 .select:hover,
 .social ion-icon:hover,
-.col-6 div span:hover{
+.col-6 div span:hover {
   cursor: pointer;
 }
 
-.card:hover{
- transform: scale(1.5);
- z-index: 99;
+.card:hover {
+  transform: scale(1.5);
+  z-index: 99;
+}
+
+.mostra-animazione {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.mostra-animazione.visibile {
+  opacity: 1;
+}
+
+.visibile {
+  opacity: 0;
 }
