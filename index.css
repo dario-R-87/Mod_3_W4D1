@@ -8,6 +8,7 @@ body {
 
 .navbar {
   background-color: black;
+  font-size: 12px;
 }
 
 .navbar-brand {
@@ -33,7 +34,7 @@ a:hover {
   color: white;
   align-items: center;
   justify-content: end;
-  gap: 10px;
+  gap: 16px;
 }
 
 .user {
@@ -56,6 +57,10 @@ ion-icon[name="menu-outline"] {
 
 form {
   width: 50%;
+}
+
+form ion-icon{
+  font-size: 16px;
 }
 
 .user_wrap {
@@ -107,4 +112,17 @@ form {
 .card-img-top {
   border-top-left-radius: unset;
   border-top-right-radius: unset;
+}
+
+#footer{
+ font-size: 12px;
+ color: #726b6b;
+ width: 60%;
+ margin-inline: auto;
+ white-space: nowrap;
+}
+
+.section button{
+  color: #726b6b;
+  border-color: #726b6b!important;
 }
