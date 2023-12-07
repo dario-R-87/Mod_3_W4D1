@@ -149,7 +149,7 @@ form div:hover,
 
 .mostra-animazione {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .mostra-animazione.visibile {

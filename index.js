@@ -156,16 +156,32 @@ for (let x = 0; x < end_for_new; x++) {
 }
 
 window.addEventListener("scroll", function () {
-  let elementDaMostrare = document.querySelector("#again_wrapper");
+  let again = document.querySelector("#again_wrapper");
+  let trend = document.querySelector("#trend_wrapper");
+  let news = document.querySelector("#new_wrapper");
 
-  let posizione = elementDaMostrare.getBoundingClientRect().top;
+  let again_pos = again.getBoundingClientRect().top;
+  let trend_pos = trend.getBoundingClientRect().top;
+  let new_pos = news.getBoundingClientRect().top;
   let altezzaFinestra = window.innerHeight;
 
   // Controlla se l'elemento è visibile
-  if (posizione + 200 < altezzaFinestra) {
-    elementDaMostrare.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  if (again_pos + 200 < altezzaFinestra) {
+    again.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
   }
-  if (posizione > altezzaFinestra) {
-    elementDaMostrare.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  if (again_pos > altezzaFinestra) {
+    again.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  }
+  if (trend_pos + 200 < altezzaFinestra) {
+    trend.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  }
+  if (trend_pos > altezzaFinestra) {
+    trend.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  }
+  if (new_pos + 200 < altezzaFinestra) {
+    news.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  }
+  if (new_pos > altezzaFinestra) {
+    news.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
   }
 });
