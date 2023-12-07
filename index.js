@@ -35,11 +35,11 @@ const end_for =
     : Math.floor(trend.length / 6) + 1;
 
 for (let x = 0; x < end_for; x++) {
-  carosel.innerHTML += `<div id="item_${x}" class="carousel-item ${
+  carosel.innerHTML += `<div id="trend_item_${x}" class="carousel-item ${
     x === 0 ? "active" : ""
   }"></div>`;
   const carosel__item = document.querySelector(
-    `#carouselExample .carousel-inner #item_${x}`
+    `#carouselExample .carousel-inner #trend_item_${x}`
   );
 
   let offset = 0;
@@ -79,11 +79,11 @@ const end_for_again =
     : Math.floor(again.length / 6) + 1;
 
 for (let x = 0; x < end_for_again; x++) {
-  carosel_again.innerHTML += `<div id="item_${x}" class="carousel-item ${
+  carosel_again.innerHTML += `<div id="again_item_${x}" class="carousel-item ${
     x === 0 ? "active" : ""
   }"></div>`;
   const carosel__item = document.querySelector(
-    `#again .carousel-inner #item_${x}`
+    `#again .carousel-inner #again_item_${x}`
   );
   let offset = 0;
 
@@ -122,11 +122,11 @@ const end_for_new =
     : Math.floor(newM.length / 6) + 1;
 
 for (let x = 0; x < end_for_new; x++) {
-  carosel_new.innerHTML += `<div id="item_${x}" class="carousel-item ${
+  carosel_new.innerHTML += `<div id="new_item_${x}" class="carousel-item ${
     x === 0 ? "active" : ""
   }"></div>`;
   const carosel__item = document.querySelector(
-    `#new .carousel-inner #item_${x}`
+    `#new .carousel-inner #new_item_${x}`
   );
   let offset = 0;
 
@@ -155,46 +155,43 @@ for (let x = 0; x < end_for_new; x++) {
   carosel__item.innerHTML += `<div class='row gx-1 justify-content-center'>${html__item}</div>`;
 }
 
+let agains = document.querySelector("#again_wrapper");
+let trends = document.querySelector("#trend_wrapper");
+let news = document.querySelector("#new_wrapper");
 
-  let agains = document.querySelector("#again_wrapper");
-  let trends = document.querySelector("#trend_wrapper");
-  let news = document.querySelector("#new_wrapper");
-
-  const animation_handler = function (){
-
+const animation_handler = function () {
   let again_pos = agains.getBoundingClientRect().top;
   let trend_pos = trends.getBoundingClientRect().top;
   let new_pos = news.getBoundingClientRect().top;
 
   let altezzaFinestra = window.innerHeight;
 
-  // Controlla se l'elemento è visibile
   if (again_pos + 150 < altezzaFinestra) {
-    agains.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+    agains.classList.add("mostra-animazione");
   }
   if (again_pos + 100 > altezzaFinestra) {
-    agains.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+    agains.classList.remove("mostra-animazione");
   }
-  if (trend_pos + 150 < altezzaFinestra) {
-    trends.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  if (trend_pos < altezzaFinestra) {
+    trends.classList.add("mostra-animazione");
   }
   if (trend_pos + 100 > altezzaFinestra) {
-    trends.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+    trends.classList.remove("mostra-animazione");
   }
   if (new_pos + 150 < altezzaFinestra) {
-    news.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+    news.classList.add("mostra-animazione");
   }
   if (new_pos + 100 > altezzaFinestra) {
-    news.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+    news.classList.remove("mostra-animazione");
   }
-  };
+};
 
 window.addEventListener("scroll", function () {
-animation_handler();
+  animation_handler();
 });
 
 window.addEventListener("resize", function () {
-animation_handler();
+  animation_handler();
 });
 
 animation_handler();
