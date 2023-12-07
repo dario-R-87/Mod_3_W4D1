@@ -155,33 +155,42 @@ for (let x = 0; x < end_for_new; x++) {
   carosel__item.innerHTML += `<div class='row gx-1 justify-content-center'>${html__item}</div>`;
 }
 
-window.addEventListener("scroll", function () {
-  let again = document.querySelector("#again_wrapper");
-  let trend = document.querySelector("#trend_wrapper");
+  const animation_handler = function (){
+  let agains = document.querySelector("#again_wrapper");
+  let trends = document.querySelector("#trend_wrapper");
   let news = document.querySelector("#new_wrapper");
 
-  let again_pos = again.getBoundingClientRect().top;
-  let trend_pos = trend.getBoundingClientRect().top;
+  let again_pos = agains.getBoundingClientRect().top;
+  let trend_pos = trends.getBoundingClientRect().top;
   let new_pos = news.getBoundingClientRect().top;
+
   let altezzaFinestra = window.innerHeight;
 
   // Controlla se l'elemento è visibile
-  if (again_pos + 200 < altezzaFinestra) {
-    again.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  if (again_pos + 150 < altezzaFinestra) {
+    agains.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
   }
-  if (again_pos > altezzaFinestra) {
-    again.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  if (again_pos + 100 > altezzaFinestra) {
+    agains.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
   }
-  if (trend_pos + 200 < altezzaFinestra) {
-    trend.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  if (trend_pos + 150 < altezzaFinestra) {
+    trends.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
   }
-  if (trend_pos > altezzaFinestra) {
-    trend.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
+  if (trend_pos + 100 > altezzaFinestra) {
+    trends.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
   }
-  if (new_pos + 200 < altezzaFinestra) {
+  if (new_pos + 150 < altezzaFinestra) {
     news.classList.add("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
   }
-  if (new_pos > altezzaFinestra) {
+  if (new_pos + 100 > altezzaFinestra) {
     news.classList.remove("mostra-animazione"); // Aggiungi una classe con un'animazione CSS
   }
+  };
+
+window.addEventListener("scroll", function () {
+animation_handler();
+});
+
+window.addEventListener("resize", function () {
+animation_handler();
 });
