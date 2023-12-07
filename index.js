@@ -155,10 +155,12 @@ for (let x = 0; x < end_for_new; x++) {
   carosel__item.innerHTML += `<div class='row gx-1 justify-content-center'>${html__item}</div>`;
 }
 
-  const animation_handler = function (){
+
   let agains = document.querySelector("#again_wrapper");
   let trends = document.querySelector("#trend_wrapper");
   let news = document.querySelector("#new_wrapper");
+
+  const animation_handler = function (){
 
   let again_pos = agains.getBoundingClientRect().top;
   let trend_pos = trends.getBoundingClientRect().top;
@@ -194,3 +196,5 @@ animation_handler();
 window.addEventListener("resize", function () {
 animation_handler();
 });
+
+animation_handler();
